@@ -101,7 +101,7 @@ let screenShake = true;
 let screenFlashes = true;
 let frameRateThrottling = true;
 let slowTintsEnabled = true;
-let optionText = ['Screen Shake','Screen Flashes','Quirks Mode','Experimental Features','Frame Rate Throttling', 'Slow Tints'];
+let optionText = ['屏幕抖动', '屏幕闪烁', '兼容模式', '实验性功能', '帧率限制', '缓慢着色'];
 let levelAlreadySharedToExplore = false;
 let lcSavedLevels;
 let nextLevelId;
@@ -1940,16 +1940,16 @@ const charModels = [
 		charimgmat: {a:0.1,b:0,c:0,d:0.1,tx:0,ty:0},
 	},
 ];
-const names = ['Ruby','Book','Ice Cube','Match','Pencil','Bubble','Lego Brick','Waffle','Tune','','','','','','','','','','','','','','','','','','','','','','','','','','','HPRC 1','HPRC 2','Crate','Metal Box','Platform','Spike Ball','Package','Companian Cube','Rusty Apparatuses','Purple Thing','Saw Blade','Spike Ball Jr.','Pillar','Large Platform','Blue Spike Ball','Green Things','Acid Platform','Large Acid Platform','Green Block','Blue Block','Spike Wall'];
+const names = ['红宝石', '书本', '冰块', '火柴', '铅笔', '泡泡', '乐高积木', '华夫饼', '曲调','','','','','','','','','','','','','','','','','','','','','','','','','','','HPRC 1','HPRC 2','箱子', '金属箱', '平台', '尖刺球', '包裹', '同伴方块', '生锈的装置', '紫色物体', '锯片', '小型尖刺球', '柱子', '大型平台', '蓝色尖刺球', '绿色物体', '酸液平台', '大型酸液平台', '绿色方块', '蓝色方块', '尖刺墙'];
 let selectedTab = 0;
 let selectedBg = 0;
-const tabNames = ['Level Info', 'Characters / Objects', 'Tiles', 'Background', 'Dialogue', 'Options'];
+const tabNames = ['关卡信息', '角色 / 物体', '图块', '背景', '对话', '选项'];
 let charInfoHeight = 40;
 let diaInfoHeight = 20;
-const charStateNames = ['', 'Dead', 'Being Recovered', 'Deadly & Moving', 'Moving', 'Deadly', 'Carryable', '', 'Non-Playable Character', 'Rescuable', 'Playable Character'];
+const charStateNames = ['', '死亡', '正在回收', '致命且移动', '移动中', '致命', '可携带', '', '非玩家角色', '可救援', '可玩角色'];
 const charStateNamesShort = ['', 'D', 'BR', 'D&M', 'M', 'D', 'C', '', 'NPC', 'R', 'P'];
-const toolNames = ['Draw Tool', 'Eraser Tool', 'Fill Rectangle Tool', 'Fill Tool', 'Eyedropper Tool', 'Selection Tool', 'Row Tool', 'Column Tool', '', 'Copy', 'Undo / Redo', 'Clear'];
-const tileNames = ['Air','Red Ground Block','Downward Facing Gray Spikes','Upward Facing Gray Spikes','Right Facing Gray Spikes','Left Facing Gray Spikes','End Gate','"E" Tree','Dialogue Starter','Red Background Block','Green Ground Block','Green Background Block','Win Token','Spring Block','Left Conveyer','Heater','Right Conveyer','Gray Spike Ball','Upward One-Way Platform','Downward Facing Black Spikes','Upward Facing Black Spikes','Right Facing Black Spikes','Left Facing Black Spikes','Downward Facing Black Spikes with Support Cable','Vertical Support Cable','Vertical Support Cable Connected Right','Horizontal Support Cable','Top Left Support Cable Connector','Horizontal Support Cable Connected Down','Horizontal Support Cable Connected Up','Vertical Support Cable Connected Left','Yellow Switch Block Solid','Dark Yellow Switch Block Solid','Yellow Switch Block Passable','Dark Yellow Switch Block Passable','Yellow Lever Facing Left','Yellow Lever Facing Right','Blue Lever Facing Left','Blue Lever Facing Right','Green Background Block with Upward One-Way Platform','Yellow Button','Blue Button','Gray Grass','Gray Dirt','Right Facing One-Way Platform','Two-Way Gray Spikes Top Left','Two-Way Gray Spikes Top Right','Crumbling Rock','Conglomerate-Like Background Block','Lamp','Gray Gems','Blue Switch Block Solid','Dark Blue Switch Block Solid','Blue Switch Block Passable','Dark Blue Switch Block Passable','Conglomerate-Like Background Block with Upward One-Way Platform','Gray Block','Green Lever Facing Left','Green Lever Facing Right','"V" Tree','Dark Green Switch Block Solid','Green Switch Block Passable','Dark Green Switch Block Passable','Green Switch Platform Up Solid','Green Switch Platform Up Passable','Green Switch Block Solid','Spotlight','Black Block','Left Facing One-Way Platform','Downward One-Way Platform','Green Background Block with Left Facing One-Way Platform','Green Button','Black Spike Ball','Purple Ground Block','"Wind Gust" Block','Vertical Electric Barrier','Horiontal Electric Barrier','Purple Background Block','Yellow Switch Spike Ball Passable','Yellow Switch Spike Ball Solid','"I" Tree','Yellow Switch Platform Up Solid','Yellow Switch Platform Up Passable','One-Way Conveyer Left','One-Way Conveyer Left (not moving)','One-Way Conveyer Right','One-Way Conveyer Right (not moving)','Purple Background Block Slanted Bottom Left','Purple Background Block Slanted Bottom Right','Light Gray Vertical Support Cable','Light Gray Horizontal Support Cable','Light Gray Horizontal Support Cable Connected Down','Light Gray Horizontal Support Cable Connected Up','Wood Block','Wood Background Block','Danger Zone Background Block','Purple Background Block Slanted Top Right','Purple Background Block Slanted Top Left','Gray Metal Ground Block','Wooden Background Block... again?','Acid','Acid Glow','Yellow Metal Ground Block','Lava','Lava Glow','Red Metal Ground Block','Yellow Metal Background Block','Dark Gray Metal Ground Block','Conveyer Lever Facing Left','Conveyer Lever Facing Right','Picture','','','','','','','','','','','','','','','','','','','','Water','Brick Ground Block','Wall of Text','Blue Switch Platform Up Solid','Blue Switch Platform Up Passable'];
+const toolNames = ['绘制工具', '橡皮擦工具', '填充矩形工具', '填充工具', '吸管工具', '选择工具', '行工具', '列工具', '', '复制', '撤销 / 重做', '清除'];
+const tileNames = ['空气', '红色地面块', '向下灰色尖刺', '向上灰色尖刺', '向右灰色尖刺', '向左灰色尖刺', '终点门', '“E”树', '对话起点', '红色背景块', '绿色地面块', '绿色背景块', '胜利标记', '弹簧块', '左向传送带', '加热器', '右向传送带', '灰色尖刺球', '向上单向平台', '向下黑色尖刺', '向上黑色尖刺', '向右黑色尖刺', '向左黑色尖刺', '带支撑缆线的向下黑色尖刺', '垂直支撑缆线', '连接右侧的垂直支撑缆线', '水平支撑缆线', '左上支撑缆线连接器', '连接下方的水平支撑缆线', '连接上方的水平支撑缆线', '连接左侧的垂直支撑缆线', '黄色开关块（实心）', '深黄色开关块（实心）', '黄色开关块（可通过）', '深黄色开关块（可通过）', '向左黄色拉杆', '向右黄色拉杆', '向左蓝色拉杆', '向右蓝色拉杆', '带向上单向平台的绿色背景块', '黄色按钮', '蓝色按钮', '灰色草地', '灰色泥土', '向右单向平台', '双向灰色尖刺（左上）', '双向灰色尖刺（右上）', '碎裂岩石', '砾岩类背景块', '灯', '灰色宝石', '蓝色开关块（实心）', '深蓝色开关块（实心）', '蓝色开关块（可通过）', '深蓝色开关块（可通过）', '带向上单向平台的砾岩类背景块', '灰色方块', '向左绿色拉杆', '向右绿色拉杆', '“V”树', '深绿色开关块（实心）', '绿色开关块（可通过）', '深绿色开关块（可通过）', '绿色开关平台（向上实心）', '绿色开关平台（向上可通过）', '绿色开关块（实心）', '聚光灯', '黑色方块', '向左单向平台', '向下单向平台', '带向左单向平台的绿色背景块', '绿色按钮', '黑色尖刺球', '紫色地面块', '“风力”块', '垂直电障', '水平电障', '紫色背景块', '可通过的黄色开关尖刺球', '实心的黄色开关尖刺球', '“I”树', '黄色开关平台（向上实心）', '黄色开关平台（向上可通过）', '左向单向传送带', '左向单向传送带（不移动）', '右向单向传送带', '右向单向传送带（不移动）', '左下倾斜的紫色背景块', '右下倾斜的紫色背景块', '浅灰色垂直支撑缆线', '浅灰色水平支撑缆线', '连接下方的浅灰色水平支撑缆线', '连接上方的浅灰色水平支撑缆线', '木块', '木头背景块', '危险区域背景块', '右上倾斜的紫色背景块', '左上倾斜的紫色背景块', '灰色金属地面块', '又是木头背景块？', '酸液', '酸液辉光', '黄色金属地面块', '岩浆', '岩浆辉光', '红色金属地面块', '黄色金属背景块', '深灰色金属地面块', '传送带拉杆（向左）', '传送带拉杆（向右）', '图片','','','','','','','','','','','','','','','','','','','','水', '砖块地面块', '大段文字', '蓝色开关平台（向上实心）', '蓝色开关平台（向上可通过）'];
 let charDropdown = -1;
 let charDropdownMS = -1;
 let charDropdownType;
@@ -1978,7 +1978,7 @@ let lcZoom = lcZoomFactor;
 let lcPan = [0,0];
 // const exploreTabNames = ['Featured', 'New', 'Top', '🔍'];
 // const exploreTabWidths = [190, 115, 115, 45];
-const exploreTabNames = ['Levels', 'Levelpacks','Search'];
+const exploreTabNames = ['关卡','关卡包','搜索'];
 const exploreTabWidths = [125, 200, 125];
 let power = 1;
 let jumpPower = 11;
@@ -2240,7 +2240,7 @@ async function loadingScreen() {
 	ctx.textAlign = 'center';
 	ctx.textBaseline = 'middle';
 	ctx.font = '30px Helvetica';
-	ctx.fillText('Loading...', cwidth / 2, cheight / 2);
+	ctx.fillText('加载中...', cwidth / 2, cheight / 2);
 
 	let req = await fetch('data/levels.txt');
 	levelsString = await req.text();
@@ -2911,24 +2911,24 @@ function drawMenu() {
 	ctx.textAlign = 'left';
 	ctx.font = '20px Helvetica';
 
-	if (levelProgress > 99) drawMenu0Button('WATCH BFDIA 5c', 665.55, 303.75, false, menuWatchC);
-	else drawMenu0Button('WATCH BFDIA 5a', 665.55, 303.75, false, menuWatchA);
+	if (levelProgress > 99) drawMenu0Button('观看 BFDIA 5c', 665.55, 303.75, false, menuWatchC);
+	else drawMenu0Button('观看 BFDIA 5a', 665.55, 303.75, false, menuWatchA);
 	if (showingNewGame2) {
 		drawRoundedRect('#ffffff', 665.5, 81, 273, 72.95, 15);
 		ctx.font = '20px Helvetica';
 		ctx.fillStyle = '#666666';
 		ctx.textAlign = 'center';
 		ctx.textBaseline = 'top';
-		linebreakText('Are you sure you want to\nerase your saved progress\nand start a new game?', 802, 84.3, 22);
-		drawNewGame2Button('YES', 680.4, 169.75, '#993333', menuNewGame2yes);
-		drawNewGame2Button('NO', 815.9, 169.75, '#1a4d1a', menuNewGame2no);
+		linebreakText('您确定要\n清除已保存的进度\n并开始新游戏吗？', 802, 84.3, 22);
+		drawNewGame2Button('是', 680.4, 169.75, '#993333', menuNewGame2yes);
+		drawNewGame2Button('否', 815.9, 169.75, '#1a4d1a', menuNewGame2no);
 	} else {
-		drawMenu0Button('OPTIONS', 665.55, 259.1, false, menuOptions);
-		drawMenu0Button('NEW GAME', 665.55, 348.4, false, menuNewGame);
+		drawMenu0Button('选项', 665.55, 259.1, false, menuOptions);
+		drawMenu0Button('新游戏', 665.55, 348.4, false, menuNewGame);
 	}
-	drawMenu0Button('CONTINUE GAME', 665.55, 393.05, levelProgress == 0, menuContGame);
-	drawMenu0Button('LEVEL CREATOR', 665.55, 437.7, false, menuLevelCreator);
-	drawMenu0Button('EXPLORE', 665.55, 482.5, false, menuExplore);
+	drawMenu0Button('继续游戏', 665.55, 393.05, levelProgress == 0, menuContGame);
+	drawMenu0Button('关卡编辑器', 665.55, 437.7, false, menuLevelCreator);
+	drawMenu0Button('探索', 665.55, 482.5, false, menuExplore);
 
 	// let started = true;
 	// if (bfdia5b.data.levelProgress == undefined || bfdia5b.data.levelProgress == 0) {
@@ -2982,8 +2982,8 @@ function drawLevelMap() {
 		ctx.font = 'bold 115px Arial';
 		ctx.fillText('5b', 47, 23);
 		ctx.font = '48px Helvetica';
-		ctx.fillText('Level', 211, 30);
-		ctx.fillText('Select', 211, 80);
+		ctx.fillText('关卡', 211, 30);
+		ctx.fillText('选择', 211, 80);
 
 		ctx.drawImage(svgTiles[12], 398.5, 34.5, 73, 73);
 		ctx.font = '40px Helvetica';
@@ -2994,7 +2994,7 @@ function drawLevelMap() {
 		let titleLineCount = wrapText((levelpackType === 0)?exploreLevelPageLevel.title:lcSavedLevelpacks['l' + lcCurrentSavedLevelpack].title, 50, 35, 500, 48).length;
 		if (levelpackType === 0) {
 			const isGuest = exploreLevelPageLevel.creator === "";
-			const username = isGuest ? "Guest" : exploreLevelPageLevel.creator.username;
+			const username = isGuest ? "访客" : exploreLevelPageLevel.creator.username;
 			
 			ctx.font = 'italic 21px Helvetica';
 			ctx.fillText('by ' + username, 50, 32 + titleLineCount*48);
@@ -3009,14 +3009,14 @@ function drawLevelMap() {
 	ctx.fillText(toHMS(timer), 767.3, 27.5);
 	ctx.fillText(deathCount.toLocaleString(), 767.3, 55.9);
 	ctx.textAlign = 'right';
-	ctx.fillText('Time:', 757.05, 27.5);
-	ctx.fillText('Deaths:', 757.05, 55.9);
+	ctx.fillText('时间:', 757.05, 27.5);
+	ctx.fillText('死亡次数:', 757.05, 55.9);
 	if (levelProgress > 0) {
 		ctx.font = '14px Helvetica';
 		ctx.textAlign = 'right';
-		ctx.fillText('Minimal deaths to complete level ' + levelProgress + ':', 756.3, 90.5);
+		ctx.fillText('完成关卡的最少死亡次数 ' + levelProgress + ':', 756.3, 90.5);
 		ctx.font = '21px Helvetica';
-		ctx.fillText('Unnecessary deaths:', 756.3, 116.8);
+		ctx.fillText('不必要的死亡次数:', 756.3, 116.8);
 		ctx.textAlign = 'left';
 		ctx.fillText(mdao[levelProgress - 1], 767.3, 85.4);
 		ctx.fillText((deathCount - mdao[levelProgress - 1]).toLocaleString(), 767.3, 116.8);
@@ -5633,7 +5633,7 @@ function drawLCCharInfo(i, y) {
 			onRect(_xmouse, _ymouse + charsTabScrollBar, 665, y + charInfoHeight, charInfoHeight, diaInfoHeight)
 		) {
 			onButton = true;
-			hoverText = 'Movement Speed';
+			hoverText = '移动速度';
 			if (mouseIsDown && !pmouseIsDown) {
 				setUndo();
 				charDropdown = -i - 3;
@@ -5681,7 +5681,7 @@ function drawLCCharInfo(i, y) {
 				) {
 					if (_xmouse < 665 + charInfoHeight * 1.5) {
 						onButton = true;
-						hoverText = 'Direction';
+						hoverText = '方向';
 						if (mouseIsDown && !pmouseIsDown) {
 							setUndo();
 							charDropdown = -i - 3;
@@ -5690,7 +5690,7 @@ function drawLCCharInfo(i, y) {
 						}
 					} else if (_xmouse < 665 + charInfoHeight + 100 - charInfoHeight) {
 						onButton = true;
-						hoverText = 'Block Count';
+						hoverText = '方块数量';
 						if (mouseIsDown && !pmouseIsDown) {
 							setUndo();
 							charDropdown = -i - 3;
@@ -5736,7 +5736,7 @@ function drawLCCharInfo(i, y) {
 						3
 					);
 					onButton = true;
-					hoverText = 'Insert Into Path';
+					hoverText = '插入到路径中';
 					if (mouseIsDown && !pmouseIsDown) {
 						setUndo();
 						myLevelChars[1][i][5].splice(j, 0, [0, 1]);
@@ -5766,7 +5766,7 @@ function drawLCCharInfo(i, y) {
 						)
 					) {
 						onButton = true;
-						hoverText = 'Add to Path';
+						hoverText = '添加到路径中';
 						if (mouseIsDown && !pmouseIsDown) {
 							setUndo();
 							myLevelChars[1][i][5].push([0, 1]);
@@ -5863,14 +5863,14 @@ function drawLCCharInfo(i, y) {
 				)
 			) {
 				onButton = true;
-				hoverText = 'State';
+				hoverText = '状态';
 				if (mouseIsDown && !pmouseIsDown) {
 					charDropdown = -i - 3;
 					charDropdownType = 1;
 				}
 			} else if (_xmouse < 665 + 240) {
 				onButton = true;
-				hoverText = 'Start Location';
+				hoverText = '起始位置';
 				if (mouseIsDown && !pmouseIsDown) {
 					setUndo();
 					charDropdown = -i - 3;
@@ -5937,7 +5937,7 @@ function drawLCDiaInfo(i, y) {
 		ctx.font = diaInfoHeight + 'px Helvetica';
 		ctx.textAlign = 'left';
 		ctx.textBaseline = 'top';
-		ctx.fillText('lever switch', 665 + diaInfoHeight * 3 + 5, y);
+		ctx.fillText('杠杆开关', 665 + diaInfoHeight * 3 + 5, y);
 	} else {
 		textBoxes[1][i].y = y;
 		textBoxes[1][i].draw();
@@ -5991,7 +5991,7 @@ function drawLCDiaInfo(i, y) {
 			// ctx.fillRect(665+240, y + (diaInfoHeight*myLevelDialogue[1][i].linecount)/2 - 10, 20, 20);
 			if (onRect(_xmouse,_ymouse,665,y,diaInfoHeight * 2,diaInfoHeight * myLevelDialogue[1][i].linecount)) {
 				onButton = true;
-				hoverText = 'Character';
+				hoverText = '角色';
 				dialogueTabCharHover = [i,y];
 				if (mouseIsDown && !pmouseIsDown) {
 					diaDropdown = -i - 3;
@@ -6001,7 +6001,7 @@ function drawLCDiaInfo(i, y) {
 				}
 			} else if (onRect(_xmouse,_ymouse,665 + diaInfoHeight * 2,y,diaInfoHeight,diaInfoHeight * myLevelDialogue[1][i].linecount)) {
 				onButton = true;
-				hoverText = myLevelDialogue[1][i].face==2?'Happy':'Sad';
+				hoverText = myLevelDialogue[1][i].face==2?'开心':'不开心';
 				if (mouseIsDown && !pmouseIsDown) {
 					diaDropdown = -i - 3;
 					diaDropdownType = 0;
@@ -6239,12 +6239,12 @@ function copyText(textIn) {
 		navigator.clipboard.writeText(text).then(
 			function () {
 				lcMessageTimer = 1;
-				lcMessageText = 'Level string successfuly copied to clipboard!';
+				lcMessageText = '关卡字符串已成功复制到剪贴板！';
 			},
 			function (err) {
 				lcMessageTimer = 1;
-				lcMessageText = 'There was an error while copying the level string.';
-				console.error('Could not copy text: ', err);
+				lcMessageText = '复制关卡字符串时发生错误。';
+				console.error('无法复制文本： ', err);
 			}
 		);
 	} else if (copyButton) {
@@ -6253,12 +6253,12 @@ function copyText(textIn) {
 		navigator.clipboard.write(data).then(
 			function () {
 				lcMessageTimer = 1;
-				lcMessageText = 'Level string successfuly copied to clipboard!';
+				lcMessageText = '关卡字符串已成功复制到剪贴板！';
 			},
 			function (err) {
 				lcMessageTimer = 1;
-				lcMessageText = 'There was an error while copying the level string.';
-				console.error('Could not copy text: ', err);
+				lcMessageText = '复制关卡字符串时发生错误。';
+				console.error('无法复制文本： ', err);
 			}
 		);
 	}
@@ -6275,7 +6275,7 @@ function generateLevelString() {
 	}
 
 	var lcLevelString = '\r\n';
-	lcLevelString += myLevelInfo.name == '' ? 'Untitled level' : myLevelInfo.name + '\r\n';
+	lcLevelString += myLevelInfo.name == '' ? '无标题关卡' : myLevelInfo.name + '\r\n';
 	lcLevelString +=
 		levelWidth.toString().padStart(2, '0') +
 		',' +
@@ -6358,7 +6358,7 @@ function readLevelString(str) {
 	// read level info
 	let levelInfo = lines[i].split(',');
 	if (levelInfo.length < 5) {
-		setLCMessage('Error while loading from string:\nFewer than 5 comma separated values in the line below the title.');
+		setLCMessage('加载字符串时发生错误：\nfewer than 5 comma separated values in the line below the title.');
 		return;
 	}
 	levelWidth = Math.max(parseInt(levelInfo[0], 10), 1);
@@ -6377,10 +6377,10 @@ function readLevelString(str) {
 		myLevelChars[1].length = 0;
 		char.length = 0;
 		setLCMessage(
-			'Error while loading from string:\n' +
+			'加载字符串时发生错误:\n' +
 				(i >= lines.length
-					? 'no tile map was provided.'
-					: "one or more values in the level's metadata was invalid.")
+					? '没有提供瓷砖地图。'
+					: "关卡的元数据中的某些值无效。")
 		);
 		return;
 	}
@@ -6423,7 +6423,7 @@ function readLevelString(str) {
 		charCount = 0;
 		myLevelChars[1].length = 0;
 		char.length = 0;
-		setLCMessage('Error while loading from string:\nno entity data was provided.');
+		setLCMessage('加载字符串时发生错误：\n没有提供瓷砖地图。');
 		return;
 	}
 
@@ -6433,7 +6433,7 @@ function readLevelString(str) {
 		if (i + e >= lines.length) {
 			myLevelChars[1].length = e;
 			char.length = e;
-			setLCMessage('Error while loading from string:\nnumber of entities did not match the provided count.');
+			setLCMessage('加载字符串时发生错误：\n实体数量与提供的计数不匹配。');
 			return;
 		}
 		let entityInfo = lines[i + e].split(',').join(' ').split(' ');
@@ -6447,7 +6447,7 @@ function readLevelString(str) {
 			) {
 				myLevelChars[1].length = e;
 				char.length = e;
-				setLCMessage("Error while loading from string:\na data value in one entity's data parsed to NaN.");
+				setLCMessage("加载字符串时发生错误：\n某个实体的数据中的一个数据值解析为NaN");
 				// myLevelChars[1][e] = [0,0.0,0.0,10];
 				return;
 			}
@@ -6501,7 +6501,7 @@ function readLevelString(str) {
 	}
 	i += myLevelChars[1].length;
 	if (i >= lines.length) {
-		setLCMessage('Error while loading from string:\nnumber of dialogue lines was not provided.');
+		setLCMessage('加载字符串时发生错误：\n未提供对话行数。');
 		return;
 	}
 
@@ -6512,7 +6512,7 @@ function readLevelString(str) {
 		if (i + d >= lines.length) {
 			myLevelDialogue[1].length = d;
 			setLCMessage(
-				'Error while loading from string:\nnumber of dialogue lines did not match the provided count.'
+				'加载字符串时发生错误：\n对话行数与提供的计数不匹配。'
 			);
 			return;
 		}
@@ -6526,7 +6526,7 @@ function readLevelString(str) {
 	generateDialogueTextBoxes();
 	if (i >= lines.length) {
 		setLCMessage(
-			"Error while loading from string:\nnecessary deaths was not provided.\n(but everything else loaded so it's probably fine)"
+			"加载字符串时发生错误：\n未提供必要死亡次数。\n（但其他内容都已加载，所以应该没问题）"
 		);
 		return;
 	}
@@ -6538,7 +6538,7 @@ function readExploreLevelString(str) {
 	myLevelChars = new Array(3);
 	myLevel = new Array(3);
 	myLevelDialogue = new Array(3);
-	myLevelInfo = {name: 'Untitled'};
+	myLevelInfo = {name: '无标题'};
 
 	let lines = str.split('\r\n');
 	if (lines.length == 1) lines = str.split('\n');
@@ -6938,7 +6938,7 @@ function drawExploreLevel(x, y, i, levelType, pageType) {
 	// fitString(ctx, explorePageLevels[i].title, 142.3);
 
 	const isGuest = thisExploreLevel.creator === undefined;
-	const username = isGuest ? "Guest" : thisExploreLevel.creator.username;
+	const username = isGuest ? "访客" : thisExploreLevel.creator.username;
 
 	if (pageType < 2) {
 		ctx.fillStyle = '#999999';
@@ -7102,7 +7102,7 @@ function drawExploreLoadingText() {
 	ctx.textAlign = 'center';
 	ctx.textBaseline = 'middle';
 	ctx.fillStyle = '#ffffff';
-	ctx.fillText('loading...', cwidth / 2, cheight / 2);
+	ctx.fillText('加载中...', cwidth / 2, cheight / 2);
 }
 
 function drawArrow(x, y, w, h, dir) {
@@ -7210,7 +7210,7 @@ function removeLevelpackLevel(locOnPage) {
 function createNewLevelpack() {
 	lcCurrentSavedLevelpack = nextLevelpackId;
 	nextLevelpackId++;
-	lcSavedLevelpacks['l' + lcCurrentSavedLevelpack] = {levels:[], description: '', id: lcCurrentSavedLevelpack, title: 'My Levelpack ' + lcCurrentSavedLevelpack};
+	lcSavedLevelpacks['l' + lcCurrentSavedLevelpack] = {levels:[], description: '', id: lcCurrentSavedLevelpack, title: '我的关卡包 ' + lcCurrentSavedLevelpack};
 	openMyLevelpack(lcCurrentSavedLevelpack);
 	saveMyLevelpacks();
 }
@@ -7603,7 +7603,7 @@ function setup() {
 				rAF60fps();
 			})
 			.catch((e) => {
-				alert("Unable to find level!", e);
+				alert("无法找到关卡!", e);
 				console.error(e);
 			});
 	} else if (levelpackId) {
@@ -7618,7 +7618,7 @@ function setup() {
 				rAF60fps();
 			})
 			.catch((e) => {
-				alert("Unable to find levelpack!", e);
+				alert("无法找到关卡包!", e);
 				console.error(e);
 			});
 	} else {
@@ -7637,7 +7637,7 @@ function draw() {
 	switch (menuScreen) {
 		case -1:
 			ctx.drawImage(preMenuBG, 0, 0, cwidth, cheight);
-			drawMenu0Button('START GAME', (cwidth - menu0ButtonSize.w) / 2, (cheight - menu0ButtonSize.h) / 2, false, playGame);
+			drawMenu0Button('开始游戏', (cwidth - menu0ButtonSize.w) / 2, (cheight - menu0ButtonSize.h) / 2, false, playGame);
 			break;
 
 		case 0:
@@ -8224,13 +8224,13 @@ function draw() {
 						if (!recover) {
 							HPRCText = '';
 						} else if (recoverTimer == 0) {
-							HPRCText = 'enter name';
+							HPRCText = '输入名称';
 						} else if (recoverTimer > 40) {
 							HPRCText = names[char[recover2].id];
 						} else if (recoverTimer > 10) {
-							HPRCText = 'Keep going';
+							HPRCText = '继续';
 						} else {
-							HPRCText = 'Done';
+							HPRCText = '完成';
 						}
 						HPRCCrankRot = recoverTimer * 12 * (Math.PI / 180);
 						if (!recover && HPRCBubbleFrame <= 2) {
@@ -8366,8 +8366,8 @@ function draw() {
 					ctx.textBaseline = 'top';
 					ctx.font = '18px Helvetica';
 					ctx.fillStyle = '#000000';
-					ctx.fillText('Name:', 770, tabWindowY + 10);
-					ctx.fillText('Description:', 770, tabWindowY + 60);
+					ctx.fillText('名称:', 770, tabWindowY + 10);
+					ctx.fillText('描述:', 770, tabWindowY + 60);
 
 					textBoxes[0][0].y = tabWindowY + 10;
 					textBoxes[0][1].y = tabWindowY + 60;
@@ -8385,7 +8385,7 @@ function draw() {
 					ctx.textAlign = 'center';
 					ctx.textBaseline = 'bottom';
 					ctx.font = '21px Helvetica';
-					ctx.fillText('Necessary Deaths:', 660 + (cwidth - 660) / 2, tabWindowY + 317);
+					ctx.fillText('必要死亡次数:', 660 + (cwidth - 660) / 2, tabWindowY + 317);
 					ctx.font = '25px Helvetica';
 					let necessaryDeathsW = 100;
 					ctx.fillStyle = '#808080';
@@ -8506,7 +8506,7 @@ function draw() {
 					) {
 						if (myLevelChars[1].length < 50) {
 							onButton = true;
-							hoverText = 'Add New Character or Object';
+							hoverText = '添加新的角色或对象';
 							if (mouseIsDown && !pmouseIsDown) {
 								duplicateChar = false;
 								reorderCharUp = false;
@@ -8552,7 +8552,7 @@ function draw() {
 					) {
 						if (myLevelChars[1].length < 50) {
 							onButton = true;
-							hoverText = 'Duplicate Character or Object';
+							hoverText = '复制角色或对象';
 							if (mouseIsDown && !pmouseIsDown) {
 								reorderCharUp = false;
 								reorderCharDown = false;
@@ -8575,7 +8575,7 @@ function draw() {
 					) {
 						if (myLevelChars[1].length < 50) {
 							onButton = true;
-							hoverText = 'Move Character or Object Up';
+							hoverText = '移动角色或对象向上';
 							if (mouseIsDown && !pmouseIsDown) {
 								duplicateChar = false;
 								reorderCharDown = false;
@@ -8598,7 +8598,7 @@ function draw() {
 					) {
 						if (myLevelChars[1].length < 50) {
 							onButton = true;
-							hoverText = 'Move Character or Object Down';
+							hoverText = '移动角色或对象向下';
 							if (mouseIsDown && !pmouseIsDown) {
 								duplicateChar = false;
 								reorderCharUp = false;
@@ -9060,14 +9060,14 @@ function draw() {
 					addButtonPressed = false;
 					if (!lcPopUp && onRect(_xmouse,_ymouse,660 + 5,cheight - (tabNames.length - selectedTab - 1) * tabHeight - 20,15,15)) {
 						onButton = true;
-						hoverText = 'Add New Dialogue Line';
+						hoverText = '添加新的对话行';
 						if (mouseIsDown && !pmouseIsDown) {
 							reorderDiaDown = false;
 							reorderDiaUp = false;
 							editingTextBox = false;
 							deselectAllTextBoxes();
 							setUndo();
-							myLevelDialogue[1].push({char: 99, face: 2, text: 'Enter text', linecount: 1});
+							myLevelDialogue[1].push({char: 99, face: 2, text: '输入文本', linecount: 1});
 							generateDialogueTextBoxes();
 						}
 						addButtonPressed = true;
@@ -9075,7 +9075,7 @@ function draw() {
 					if (!lcPopUp && onRect(_xmouse,_ymouse,660 + 25,cheight - (tabNames.length - selectedTab - 1) * tabHeight - 20,15,15)) {
 						if (myLevelChars[1].length < 50) {
 							onButton = true;
-							hoverText = 'Move Dialogue Line Up';
+							hoverText = '移动对话行向上';
 							if (mouseIsDown && !pmouseIsDown) {
 								reorderDiaDown = false;
 								reorderDiaUp = true;
@@ -9089,7 +9089,7 @@ function draw() {
 					if (!lcPopUp && onRect(_xmouse,_ymouse,660 + 45,cheight - (tabNames.length - selectedTab - 1) * tabHeight - 20,15,15)) {
 						if (myLevelChars[1].length < 50) {
 							onButton = true;
-							hoverText = 'Move Dialogue Line Down';
+							hoverText = '移动对话行向下';
 							if (mouseIsDown && !pmouseIsDown) {
 								reorderDiaUp = false;
 								reorderDiaDown = true;
@@ -9145,21 +9145,21 @@ function draw() {
 				case 5:
 					// Options
 					ctx.font = '23px Helvetica';
-					if (drawSimpleButton('Copy String', copyLevelString, 675, tabWindowY + 10, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555').hover) copyButton = 1;
-					drawSimpleButton('Load String', openLevelLoader, 815, tabWindowY + 10, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
-					drawSimpleButton('Test Level', testLevelCreator, 675, tabWindowY + 50, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
+					if (drawSimpleButton('复制字符串', copyLevelString, 675, tabWindowY + 10, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555').hover) copyButton = 1;
+					drawSimpleButton('加载字符串', openLevelLoader, 815, tabWindowY + 10, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
+					drawSimpleButton('测试关卡', testLevelCreator, 675, tabWindowY + 50, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
 					// if (enableExperimentalFeatures) {
 					let isNew = lcCurrentSavedLevel==-1;
 					if (!isNew) ctx.font = '18px Helvetica';
-					drawSimpleButton(isNew?'Save Level':'Save Changes', saveLevelCreator, 675, tabWindowY + 90, 130, 30, isNew?3:5, '#ffffff', '#404040', '#666666', '#555555', {enabled:lcChangesMade});
+					drawSimpleButton(isNew?'保存关卡':'保存更改', saveLevelCreator, 675, tabWindowY + 90, 130, 30, isNew?3:5, '#ffffff', '#404040', '#666666', '#555555', {enabled:lcChangesMade});
 					ctx.font = '23px Helvetica';
-					drawSimpleButton('Save Copy', saveLevelCreatorCopy, 815, tabWindowY + 90, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555', {enabled:!isNew});
-					drawSimpleButton('New Blank Level', resetLevelCreator, 675, tabWindowY + 130, 270, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
-					drawSimpleButton('My Levels', menuMyLevels, 675, tabWindowY + 170, 270, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
+					drawSimpleButton('保存副本', saveLevelCreatorCopy, 815, tabWindowY + 90, 130, 30, 3, '#ffffff', '#404040', '#666666', '#555555', {enabled:!isNew});
+					drawSimpleButton('新建空白关卡', resetLevelCreator, 675, tabWindowY + 130, 270, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
+					drawSimpleButton('我的关卡', menuMyLevels, 675, tabWindowY + 170, 270, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
 					// }
 
-					drawSimpleButton(loggedInExploreUser5beamID ? 'Share to Explore' : 'Share to Explore as Guest', shareToExplore, 675, tabWindowY + 210, 270, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
-					drawMenu0Button('EXIT', 846, cheight - 50, false, menuExitLevelCreator, 100);
+					drawSimpleButton(loggedInExploreUser5beamID ? '分享到探索' : '分享到探索为访客', shareToExplore, 675, tabWindowY + 210, 270, 30, 3, '#ffffff', '#404040', '#666666', '#555555');
+					drawMenu0Button('退出', 846, cheight - 50, false, menuExitLevelCreator, 100);
 					// drawMenu2_3Button(0, 837.5, 486.95, menuExitLevelCreator);
 					break;
 			}
@@ -9394,7 +9394,7 @@ function draw() {
 					ctx.textBaseline = 'top';
 					ctx.textAlign = 'left';
 					ctx.fillText(
-						"Paste your level's string here:",
+						"在此处粘贴关卡字符串:",
 						(cwidth - lcPopUpW) / 2 + 10,
 						(cheight - lcPopUpH) / 2 + 5
 					);
@@ -9416,7 +9416,7 @@ function draw() {
 					);
 					ctx.fillStyle = '#ffffff';
 					ctx.fillText(
-						'Cancel',
+						'取消',
 						(cwidth - lcPopUpW) / 2 + lcPopUpW - 110,
 						(cheight - lcPopUpH) / 2 + lcPopUpH - 33
 					);
@@ -9429,7 +9429,7 @@ function draw() {
 					);
 					ctx.fillStyle = '#ffffff';
 					ctx.fillText(
-						'Load',
+						'加载',
 						(cwidth - lcPopUpW) / 2 + lcPopUpW - 40,
 						(cheight - lcPopUpH) / 2 + lcPopUpH - 33
 					);
@@ -9573,7 +9573,7 @@ function draw() {
 				ctx.textAlign = 'left';
 				ctx.fillStyle = '#ffffff';
 				ctx.font = '24px Helvetica';
-				ctx.fillText('Sort by: ' + exploreSortText[exploreSort], 932-exploreSortTextWidth + 5, 88);
+				ctx.fillText('排序方式: ' + exploreSortText[exploreSort], 932-exploreSortTextWidth + 5, 88);
 
 				// Page number
 				ctx.textAlign = 'center';
@@ -9602,9 +9602,9 @@ function draw() {
 			drawMenu2_3Button(1, 837.5, 486.95, menu2Back);
 			// if (enableExperimentalFeatures) drawMenu2_3Button(2, 10, 486.95, logInExplore);
 			if (loggedInExploreUser5beamID === -1) {
-				drawMenu0Button('LOG IN', 540, 20, false, logInExplore, 120);
+				drawMenu0Button('登录', 540, 20, false, logInExplore, 120);
 			} else {
-				drawMenu0Button('LOG OUT', 520, 20, false, logOutExplore, 150);
+				drawMenu0Button('登出', 520, 20, false, logOutExplore, 150);
 			}
 			break;
 
@@ -9618,7 +9618,7 @@ function draw() {
 				drawExploreLoadingText();
 			} else {
 				const isGuest = exploreLevelPageLevel.creator === "";
-				const username = isGuest ? "Guest" : exploreLevelPageLevel.creator.username;
+				const username = isGuest ? "访客" : exploreLevelPageLevel.creator.username;
 
 				ctx.textBaseline = 'top';
 				ctx.textAlign = 'left';
@@ -9661,7 +9661,7 @@ function draw() {
 				ctx.textAlign = 'right';
 
 				let pluralViewText = exploreLevelPageLevel.plays === 1
-				ctx.fillText(exploreLevelPageLevel.plays + (pluralViewText ? ' play' : ' plays'), 410, 325);
+				ctx.fillText(exploreLevelPageLevel.plays + (pluralViewText ? ' 玩' : ' 玩'), 410, 325);
 				ctx.textAlign = 'left';
 
 				// Difficulty in levelpacks arent supported yet
@@ -9698,29 +9698,29 @@ function draw() {
 
 				ctx.font = '20px Helvetica';
 				if (!showingExploreNewGame2) {
-					drawSimpleButton(exploreLevelPageType===0?'Play Level':'New Game', playExploreLevel===0?playExploreLevel:openExploreNewGame2, 30, 379, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
+					drawSimpleButton(exploreLevelPageType===0?'游玩关卡':'新游戏', playExploreLevel===0?playExploreLevel:openExploreNewGame2, 30, 379, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
 
 					if (exploreLevelPageType != 0) {
-						drawSimpleButton('Continue Game', continueExploreLevelpack, 30, 417, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080', {enabled:typeof levelpackProgress[exploreLevelPageLevel.id] !== 'undefined'});
+						drawSimpleButton('继续游戏', continueExploreLevelpack, 30, 417, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080', {enabled:typeof levelpackProgress[exploreLevelPageLevel.id] !== 'undefined'});
 					}
 				} else {
-					drawSimpleButton('Yes', exploreNewGame2yes, 30, 417, 90, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
-					drawSimpleButton('No', exploreNewGame2no, 128, 417, 90, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
+					drawSimpleButton('是', exploreNewGame2yes, 30, 417, 90, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
+					drawSimpleButton('否', exploreNewGame2no, 128, 417, 90, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
 					ctx.fillStyle ='#ffffff';
 					ctx.textBaseline = 'middle';
-					ctx.fillText('Are you sure?', 124, 396);
+					ctx.fillText('您确定吗?', 124, 396);
 				}
 
-				if (drawSimpleButton('Copy Link', exploreCopyLink, 226, 379, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080').hover) copyButton = 3;
+				if (drawSimpleButton('复制链接', exploreCopyLink, 226, 379, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080').hover) copyButton = 3;
 
 				if (!isGuest) {
-					drawSimpleButton('More By This User', exploreMoreByThisUser, 226, 417, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
+					drawSimpleButton('此用户的更多内容', exploreMoreByThisUser, 226, 417, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
 				}
 
 				if (exploreLevelPageType != 1 && loggedInExploreUser5beamID === exploreLevelPageLevel.creator.id) {
-					drawSimpleButton(editingExploreLevel?'Save Changes':'Edit', editExploreLevel, 226, 455, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
+					drawSimpleButton(editingExploreLevel?'保存更改':'编辑', editExploreLevel, 226, 455, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
 					if (editingExploreLevel) {
-						drawSimpleButton('Cancel', cancelEditExploreLevel, 226, 493, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
+						drawSimpleButton('取消', cancelEditExploreLevel, 226, 493, 188, 30, 3, '#ffffff', '#404040', '#808080', '#808080');
 						;
 					}
 				}
@@ -9732,7 +9732,7 @@ function draw() {
 					ctx.fillStyle = '#000000';
 					ctx.textAlign = 'left';
 					ctx.textBaseline = 'top';
-					wrapText('Warning: The "Impossible" difficulty is only for levels which are, without a doubt, impossible to complete. In the future, these levels may be put on a separate page.', _xmouse + 15, _ymouse + 5, 390, 16);
+					wrapText('警告："不可能"难度仅适用于确定无法完成的关卡。未来这些关卡可能会被放在单独的页面上。', _xmouse + 15, _ymouse + 5, 390, 16);
 				}
 			}
 
@@ -9763,7 +9763,7 @@ function draw() {
 					ctx.textBaseline = 'top';
 					ctx.textAlign = 'left';
 					ctx.fillText(
-						'You can modify your level\'s data for small changes. Paste your new string here:',
+						'您可以修改关卡数据进行小的更改。在此处粘贴您的新字符串：',
 						(cwidth - lcPopUpW) / 2 + 10,
 						(cheight - lcPopUpH) / 2 + 5
 					);
@@ -9775,8 +9775,8 @@ function draw() {
 					// levelLoadString = textBoxes[0][3].text;
 
 					ctx.font = '18px Helvetica';
-					drawSimpleButton('Save', confirmChangeLevelString, (cwidth - lcPopUpW) / 2 + lcPopUpW - 70, (cheight + lcPopUpH) / 2 - 40, 60, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {isOnPopUp:true});
-					drawSimpleButton('Cancel', cancelChangeLevelString, (cwidth - lcPopUpW) / 2 + lcPopUpW - 140, (cheight + lcPopUpH) / 2 - 40, 60, 30, 3, '#ffffff', '#a0a0a0', '#a0a0a0', '#a0a0a0', {isOnPopUp:true});
+					drawSimpleButton('保存', confirmChangeLevelString, (cwidth - lcPopUpW) / 2 + lcPopUpW - 70, (cheight + lcPopUpH) / 2 - 40, 60, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {isOnPopUp:true});
+					drawSimpleButton('取消', cancelChangeLevelString, (cwidth - lcPopUpW) / 2 + lcPopUpW - 140, (cheight + lcPopUpH) / 2 - 40, 60, 30, 3, '#ffffff', '#a0a0a0', '#a0a0a0', '#a0a0a0', {isOnPopUp:true});
 				}
 			}
 
@@ -9807,7 +9807,7 @@ function draw() {
 					ctx.textAlign = 'left';
 					ctx.fillStyle = '#ffffff';
 					ctx.font = '25px Helvetica';
-					ctx.fillText(j==0?'Levels':'Levelpacks', 55, y-3);
+					ctx.fillText(j==0?'关卡':'关卡包', 55, y-3);
 
 					// Previous page button
 					if (exploreUserPageNumbers[j] <= 1 || exploreLoading) ctx.fillStyle = '#505050';
@@ -9917,13 +9917,13 @@ function draw() {
 				ctx.textAlign = 'left';
 				ctx.textBaseline = 'bottom';
 				ctx.fillStyle = '#ffffff';
-				ctx.fillText('Select a level to add', 28, 55);
+				ctx.fillText('选择要添加的关卡', 28, 55);
 			} else {
 				ctx.font = '26px Helvetica';
 				ctx.textAlign = 'right';
 				ctx.textBaseline = 'bottom';
 				ctx.fillStyle = '#ffffff';
-				ctx.fillText(deletingMyLevels?'click the trash can to exit delete mode':'click on a level or levelpack to edit it', cwidth-28, 60);
+				ctx.fillText(deletingMyLevels?'点击垃圾桶退出删除模式':'点击关卡或关卡包以编辑', cwidth-28, 60);
 
 				// Tabs
 				ctx.font = 'bold 35px Helvetica';
@@ -10003,10 +10003,10 @@ function draw() {
 				ctx.font = '20px Helvetica';
 				ctx.textBaseline = 'top';
 				ctx.textAlign = 'left';
-				wrapText((myLevelsTab===0)?('Are you sure you want to delete the level "' + lcSavedLevels[levelToDelete].title):('Are you sure you want to delete the levelpack "' + lcSavedLevelpacks[levelToDelete].title) + '"? This action can not be undone.', (cwidth - lcPopUpW) / 2 + 10, (cheight - lcPopUpH) / 2 + 5, lcPopUpW - 20, 22);
+				wrapText((myLevelsTab===0)?('您确定要删除关卡 "' + lcSavedLevels[levelToDelete].title):('您确定要删除关卡包 "' + lcSavedLevelpacks[levelToDelete].title) + '"? 此操作无法撤销。', (cwidth - lcPopUpW) / 2 + 10, (cheight - lcPopUpH) / 2 + 5, lcPopUpW - 20, 22);
 
-				drawSimpleButton('Cancel', cancelDeleteLevel, cwidth/2 - 125, (cheight + lcPopUpH) / 2 - 40, 100, 30, 3, '#ffffff', '#a0a0a0', '#c0c0c0', '#c0c0c0', {isOnPopUp:true});
-				drawSimpleButton('Delete', confirmDeleteLevel, cwidth/2 + 25, (cheight + lcPopUpH) / 2 - 40, 100, 30, 3, '#ffffff', '#ff0000', '#ff8080', '#ffa0a0', {isOnPopUp:true});
+				drawSimpleButton('取消', cancelDeleteLevel, cwidth/2 - 125, (cheight + lcPopUpH) / 2 - 40, 100, 30, 3, '#ffffff', '#a0a0a0', '#c0c0c0', '#c0c0c0', {isOnPopUp:true});
+				drawSimpleButton('删除', confirmDeleteLevel, cwidth/2 + 25, (cheight + lcPopUpH) / 2 - 40, 100, 30, 3, '#ffffff', '#ff0000', '#ff8080', '#ffa0a0', {isOnPopUp:true});
 			}
 
 
@@ -10026,24 +10026,24 @@ function draw() {
 			textBoxes[0][0].draw();
 			lcSavedLevelpacks['l' + lcCurrentSavedLevelpack].title = textBoxes[0][0].text;
 			if (wasEditingBefore && !editingTextBox) saveMyLevelpacks();
-			drawSimpleButton('', openEditLevelpackDescriptionDialog, 877, 15, 55, 55, 3, '#ffffff', '#333333', '#404040', '#404040', {alt:'Remove levels'});
+			drawSimpleButton('', openEditLevelpackDescriptionDialog, 877, 15, 55, 55, 3, '#ffffff', '#333333', '#404040', '#404040', {alt:'移除关卡'});
 			ctx.drawImage(svgMyLevelsIcons[1], 877, 15, 55, 55);
 
 
-			drawSimpleButton('', toggleLevelpackCreatorRemovingLevels, 28, 85, 30, 30, 3, '#ffffff', '#ff0000', '#ff4040', '#ff4040', {alt:'Remove levels'});
+			drawSimpleButton('', toggleLevelpackCreatorRemovingLevels, 28, 85, 30, 30, 3, '#ffffff', '#ff0000', '#ff4040', '#ff4040', {alt:'移除关卡'});
 			ctx.drawImage(svgMyLevelsIcons[0], 28, 85, svgMyLevelsIcons[0].width/scaleFactor, svgMyLevelsIcons[0].height/scaleFactor);
 
-			drawSimpleButton('', openAddLevelsToLevelpackScreen, 68, 85, 30, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'Add levels'});
+			drawSimpleButton('', openAddLevelsToLevelpackScreen, 68, 85, 30, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'添加关卡'});
 			ctx.drawImage(svgMyLevelsIcons[1], 68, 85, svgMyLevelsIcons[1].width/scaleFactor, svgMyLevelsIcons[1].height/scaleFactor);
 
-			if (drawSimpleButton('', copySavedLevelpackString, 108, 85, 30, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'Copy levelpack string'}).hover) copyButton = 2;
+			if (drawSimpleButton('', copySavedLevelpackString, 108, 85, 30, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'复制关卡包字符串'}).hover) copyButton = 2;
 			ctx.drawImage(svgMyLevelsIcons[2], 108, 85, svgMyLevelsIcons[2].width/scaleFactor, svgMyLevelsIcons[2].height/scaleFactor);
 
-			drawSimpleButton('', playSavedLevelpack, 148, 85, 30, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'Play levelpack'});
+			drawSimpleButton('', playSavedLevelpack, 148, 85, 30, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'游玩关卡包'});
 			ctx.drawImage(svgMyLevelsIcons[4], 148, 85, svgMyLevelsIcons[4].width/scaleFactor, svgMyLevelsIcons[4].height/scaleFactor);
 
 			ctx.font = '23px Helvetica';
-			drawSimpleButton('Share to Explore', sharePackToExplore, 188, 85, 200, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'Share levelpack to exlore'});
+			drawSimpleButton('分享到探索', sharePackToExplore, 188, 85, 200, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {alt:'分享关卡包到探索'});
 			// ctx.drawImage(svgMyLevelsIcons[3], 188, 85);
 
 			if (levelpackCreatorRemovingLevels) {
@@ -10051,7 +10051,7 @@ function draw() {
 				ctx.textAlign = 'right';
 				ctx.textBaseline = 'top';
 				ctx.fillStyle = '#ffffff';
-				ctx.fillText('click the trash can to exit delete mode', cwidth-28, 85);
+				ctx.fillText('点击垃圾桶退出删除模式', cwidth-28, 85);
 			}
 
 
@@ -10105,7 +10105,7 @@ function draw() {
 				ctx.font = '20px Helvetica';
 				ctx.textBaseline = 'top';
 				ctx.textAlign = 'left';
-				ctx.fillText("Levelpack description:", (cwidth - lcPopUpW) / 2 + 10, (cheight - lcPopUpH) / 2 + 5);
+				ctx.fillText("关卡包描述:", (cwidth - lcPopUpW) / 2 + 10, (cheight - lcPopUpH) / 2 + 5);
 				textBoxes[0][1].x = (cwidth - lcPopUpW) / 2 + 10;
 				textBoxes[0][1].y = (cheight - lcPopUpH) / 2 + 30;
 				textBoxes[0][1].w = lcPopUpW - 30;
@@ -10114,7 +10114,7 @@ function draw() {
 				lcSavedLevelpacks['l' + lcCurrentSavedLevelpack].description = textBoxes[0][1].text;
 
 				ctx.font = '18px Helvetica';
-				drawSimpleButton('Done', closeLevelpackDescriptionDialog, (cwidth - lcPopUpW) / 2 + 10, (cheight + lcPopUpH) / 2 - 40, 60, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {isOnPopUp:true});
+				drawSimpleButton('完成', closeLevelpackDescriptionDialog, (cwidth - lcPopUpW) / 2 + 10, (cheight + lcPopUpH) / 2 - 40, 60, 30, 3, '#ffffff', '#00a0ff', '#40a0ff', '#40a0ff', {isOnPopUp:true});
 			}
 
 			if (lcPopUpNextFrame) lcPopUp = true;
